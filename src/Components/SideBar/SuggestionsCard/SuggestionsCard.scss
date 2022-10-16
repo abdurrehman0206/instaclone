@@ -1,0 +1,29 @@
+@import "../../../_general.scss";
+.suggestion--wrapper {
+  margin: 0 0 10px 0;
+  @include flex;
+  justify-content: space-between;
+  a {
+    font-size: 11px;
+    font-weight: 600;
+    color: #57b8f7;
+  }
+}
+.suggestion {
+  @include flex;
+  justify-content: flex-start;
+  gap: $s;
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+.suggestion--details {
+  line-height: $xl;
+  p {
+    font-size: 10px;
+    font-weight: 300;
+    color: #9c9c9c;
+  }
+}

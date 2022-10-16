@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+.cta--btn {
+  border-radius: 5px;
+  padding: 0.5rem 1.25rem;
+  font-weight: bold;
+}
+
+body {
+  min-width: 390px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+.header--container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+  height: 60px;
+  border-bottom: 1px solid #dbdbdb;
+}
+@media only screen and (max-width: 1000px) {
+  .header--container {
+    gap: 0rem;
+    justify-content: space-around;
+  }
+}
+
+.header--logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header--logo img {
+  width: 100px;
+}
+
+.header--search {
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.header--search .search--logo {
+  width: 25px;
+  height: 25px;
+  color: #b8b6b6;
+  margin: 0 0.5rem;
+}
+.header--search input {
+  padding: 0.75rem 0;
+  background-color: transparent;
+}
+.header--search input::-moz-placeholder {
+  color: #d7d7d7;
+}
+.header--search input:-ms-input-placeholder {
+  color: #d7d7d7;
+}
+.header--search input::placeholder {
+  color: #d7d7d7;
+}
+@media only screen and (max-width: 1000px) {
+  .header--search {
+    display: none;
+  }
+}
+
+.header--nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav--icons {
+  width: 25px;
+  height: 25px;
+}
+.nav--icons:hover {
+  transform: scale(1.1);
+}
+
+.profile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+}
+.profile .profile--pic {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.profile .dropdown {
+  display: none;
+  width: 150px;
+  padding: 0.5rem;
+  box-shadow: 1px 2px 5px -1px #dbdbdb;
+  border-radius: 0.5rem 0 0.5rem 0.5rem;
+  background-color: #ffffff;
+  margin-top: 95px;
+  right: -4px;
+  position: absolute;
+}
+.profile .dropdown P {
+  cursor: pointer;
+}
+.profile .dropdown::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 1px 2px 3px 2px #dbdbdb;
+}
+.profile .dropdown.active {
+  display: block;
+}/*# sourceMappingURL=Header.css.map */

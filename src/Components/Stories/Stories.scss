@@ -1,0 +1,28 @@
+@import "../../_general.scss";
+
+.stories--container {
+  margin-top: 0;
+  padding: $l;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  @include flex;
+  justify-content: flex-start;
+  gap: $l;
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    height: 5px;
+    margin-bottom: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    overflow: hidden;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #dbdbdb;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}

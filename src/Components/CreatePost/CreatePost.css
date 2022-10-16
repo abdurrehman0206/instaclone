@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+.cta--btn {
+  border-radius: 5px;
+  padding: 0.5rem 1.25rem;
+  font-weight: bold;
+}
+
+body {
+  min-width: 390px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+.createpost--wrapper {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  display: none;
+  min-width: 390px;
+}
+.createpost--wrapper.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.createpost--wrapper form {
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.createpost--container {
+  z-index: 999;
+  border: 1px solid #dbdbdb;
+  width: 600px;
+  height: 80%;
+  min-width: 600px;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 600px) {
+  .createpost--container {
+    min-width: 0;
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 901px) {
+  .createpost--container {
+    min-width: 0;
+    width: 80%;
+  }
+}
+
+.createpost--header {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid #dbdbdb;
+}
+.createpost--header .createpost--close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.createpost--body {
+  width: 100%;
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.createpost--body .select--file {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: #0095f6;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.preview--container {
+  width: 90%;
+  position: relative;
+}
+.preview--container .remove--file {
+  font-weight: 600;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+.preview--container img {
+  width: 100%;
+  height: 100%;
+  max-height: 470px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.createpost--footer {
+  border-top: 1px solid #dbdbdb;
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.createpost--footer img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.createpost--footer input {
+  flex-basis: 100%;
+}
+.createpost--footer button {
+  color: #0095f6;
+  background-color: transparent;
+  font-weight: 600;
+  cursor: pointer;
+}
+.createpost--footer button.disable {
+  display: none;
+}/*# sourceMappingURL=CreatePost.css.map */

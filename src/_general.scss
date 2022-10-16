@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+$bg-color: #fafafa;
+$bt: 1px solid magenta;
+$s: 0.5rem;
+$m: 0.75rem;
+$l: 1rem;
+$xl: 1.25rem;
+$xxl: 1.5rem;
+$xxxl: 1.75rem;
+$xxxxl: 2rem;
+@mixin respond($device) {
+  @if $device == phone {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  } @else if $device == tablet {
+    @media only screen and (max-width: 901px) {
+      @content;
+    }
+  }
+}
+@mixin screen($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+.cta--btn {
+  border-radius: 5px;
+  padding: $s $xl;
+  font-weight: bold;
+}
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  min-width: 390px;
+  font-family: "Poppins", sans-serif;
+  background-color: $bg-color;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}

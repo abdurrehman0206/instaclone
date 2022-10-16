@@ -1,0 +1,19 @@
+@import "../../../general";
+
+.stories--user {
+  width: 60px;
+  min-width: 60px;
+  @include flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: $s;
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  p {
+    font-size: 11px;
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+.cta--btn {
+  border-radius: 5px;
+  padding: 0.5rem 1.25rem;
+  font-weight: bold;
+}
+
+body {
+  min-width: 390px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+.loading--wrapper {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.loading--wrapper h4 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 14px;
+}
+
+.loadingbar--container {
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 100%;
+  }
+  50% {
+    right: 0;
+    width: 0;
+  }
+  75% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 100%;
+  }
+  50% {
+    right: 0;
+    width: 0;
+  }
+  75% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+.loadingbar {
+  position: absolute;
+  width: 5%;
+  height: 100%;
+  background-color: #0095f6;
+  border-radius: 5px;
+  -webkit-animation: scroll 1s linear infinite;
+          animation: scroll 1s linear infinite;
+}/*# sourceMappingURL=LoadingBar.css.map */

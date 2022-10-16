@@ -19,4 +19,24 @@ body {
   border: none;
   text-decoration: none;
   list-style: none;
-}/*# sourceMappingURL=index.css.map */
+}
+
+.stories--user {
+  width: 60px;
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 0.5rem;
+}
+.stories--user img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.stories--user p {
+  font-size: 11px;
+  align-self: flex-start;
+}/*# sourceMappingURL=StoriesCard.css.map */
