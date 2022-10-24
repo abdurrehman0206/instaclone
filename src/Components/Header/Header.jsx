@@ -12,6 +12,7 @@ import logo from "../../images/logo.png";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 import CreatePost from "../CreatePost/CreatePost";
+import Loader from "../Loader/Loader";
 function Header() {
   const nav = useNavigate();
   const { currentUser } = useContext(AuthContext);
@@ -34,6 +35,9 @@ function Header() {
   const createPost = () => {
     document.getElementById("createpost").classList.add("active");
   };
+  if (!currentUser) {
+    return <div></div>;
+  }
   return (
     <div className="header--container">
       <div className="header--logo">
@@ -44,7 +48,7 @@ function Header() {
         <input type="text" placeholder="Search" />
       </div>
       <div className="header--nav">
-        <BiHome className="nav--icons" />
+        <BiHome onClick={() => nav("/")} className="nav--icons" />
         <RiMessengerLine className="nav--icons" />
         <MdOutlineAddBox className="nav--icons" onClick={createPost} />
         <CreatePost className="createpost" />
@@ -53,6 +57,7 @@ function Header() {
         <div className="profile" onClick={dropMenu}>
           <img className="profile--pic" src={currentUser.photoURL} alt="" />
           <div className="dropdown">
+            <p onClick={() => nav(`/${currentUser.displayName}`)}>Profile</p>
             <p onClick={handleSignout}>Sign Out</p>
           </div>
         </div>

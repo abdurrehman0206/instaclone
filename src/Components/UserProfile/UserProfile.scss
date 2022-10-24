@@ -1,0 +1,69 @@
+@import "../../general";
+
+.userprofile--wrapper {
+  @include flex;
+}
+.userprofile--container {
+  margin-top: $xl;
+  width: 50%;
+  @include respond(phone) {
+    width: 90%;
+  }
+}
+.userprofile {
+  width: 55%;
+  @include flex;
+  justify-content: space-between;
+  gap: $l;
+  @include respond(phone) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.userprofile--pic {
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+}
+.userprofile--details {
+  @include flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $xxl;
+  h4 {
+    font-size: $xxxl;
+    font-weight: 200;
+  }
+  .bold {
+    font-size: $l;
+    font-weight: 600;
+  }
+}
+.userprofile--stats {
+  @include flex;
+  gap: $xl;
+  p {
+    font-size: 14px;
+  }
+}
+.userposts--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-top: 5rem;
+}
+.userpost--thumbnail {
+  border-radius: $s;
+  overflow: hidden;
+  box-shadow: 2px 2px 7px 2px #dbdbdb;
+  width: 270px;
+  height: 270px;
+  img {
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+  }
+}

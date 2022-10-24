@@ -8,9 +8,16 @@ import { FiSend } from "react-icons/fi";
 import { BsBookmark } from "react-icons/bs";
 import InputEmoji from "react-input-emoji";
 import { db } from "../../../firebase";
-import { doc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
+import {
+  doc,
+  updateDoc,
+  arrayUnion,
+  arrayRemove,
+  onSnapshot,
+} from "firebase/firestore";
 import { AuthContext } from "../../../Context/AuthContext";
 function PostCard(props) {
+  const [loaded, setLoaded] = useState(false);
   const { currentUser } = useContext(AuthContext);
   const [comment, setComment] = useState("");
   const [isLiked, setIsLiked] = useState(false);
@@ -46,20 +53,17 @@ function PostCard(props) {
     element.scrollTop = element.scrollHeight;
   }, [props.comments]);
   useEffect(() => {
-    let cnt = 0;
+    setLikes(props.likes.length);
     if (props.likes.length !== 0) {
       props.likes.map((like) => {
-        cnt += 1;
         if (like.uid === currentUser.uid) {
           setIsLiked(true);
         }
         return like;
       });
-      setLikes(cnt);
-    } else {
-      setLikes(0);
     }
-  }, [props.likes]);
+  }, [props]);
+
   const postComment = async () => {
     const docRef = doc(db, "userPosts", props.postId);
     await updateDoc(docRef, {
@@ -131,7 +135,7 @@ function PostCard(props) {
         </div>
       </div>
       <div className="post--image">
-        <img src={props.postImage} alt="post" />
+        <img src={props.postImage} alt="post" style={{ objectFit: "cover" }} />
       </div>
       <div className="post--interection">
         <div className="post--interection--left">

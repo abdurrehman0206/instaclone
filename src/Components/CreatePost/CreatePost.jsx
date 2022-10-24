@@ -4,7 +4,7 @@ import { AuthContext } from "../../Context/AuthContext";
 import LoadingBar from "../LoadingBar/LoadingBar";
 import AddFile from "../../images/select.png";
 import { db, storage } from "../../firebase";
-import { doc, setDoc } from "firebase/firestore";
+import { arrayUnion, doc, setDoc, updateDoc } from "firebase/firestore";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 function CreatePost() {
   const [uploading, setUploading] = useState(false);
@@ -31,8 +31,14 @@ function CreatePost() {
       likes: [],
       comments: [],
     })
-      .then((res) => {
+      .then(async (res) => {
         setUploading(false);
+        await updateDoc(doc(db, "users", currentUser.uid), {
+          posts: arrayUnion({
+            postId: postId,
+            postImage: url,
+          }),
+        });
         console.log("POST RES:", res);
       })
       .catch((err) => {

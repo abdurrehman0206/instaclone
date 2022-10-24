@@ -30,7 +30,7 @@ function Login() {
     //   });
     signInWithRedirect(auth, googleAuth);
     await getRedirectResult(auth)
-      .then((result) => {
+      .then(() => {
         nav("/");
       })
       .catch((error) => {

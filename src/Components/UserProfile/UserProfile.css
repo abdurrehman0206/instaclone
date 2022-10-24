@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+.cta--btn {
+  border-radius: 5px;
+  padding: 0.5rem 1.25rem;
+  font-weight: bold;
+}
+
+body {
+  min-width: 390px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+.userprofile--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userprofile--container {
+  margin-top: 1.25rem;
+  width: 50%;
+}
+@media only screen and (max-width: 600px) {
+  .userprofile--container {
+    width: 90%;
+  }
+}
+
+.userprofile {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .userprofile {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.userprofile--pic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.userprofile--details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.userprofile--details h4 {
+  font-size: 1.75rem;
+  font-weight: 200;
+}
+.userprofile--details .bold {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.userprofile--stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+.userprofile--stats p {
+  font-size: 14px;
+}
+
+.userposts--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-top: 5rem;
+}
+
+.userpost--thumbnail {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 2px 2px 7px 2px #dbdbdb;
+  width: 270px;
+  height: 270px;
+}
+.userpost--thumbnail img {
+  width: 270px;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=UserProfile.css.map */

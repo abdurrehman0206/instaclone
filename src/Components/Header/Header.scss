@@ -65,12 +65,13 @@
     width: 150px;
     padding: $s;
     box-shadow: 1px 2px 5px -1px #dbdbdb;
-    border-radius: $s 0 $s $s;
+    border-radius: $s;
     background-color: #ffffff;
-    margin-top: 95px;
     right: -4px;
+    bottom: -110px;
     position: absolute;
     P {
+      padding: $s;
       cursor: pointer;
     }
     &::before {
