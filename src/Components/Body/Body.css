@@ -45,8 +45,10 @@ body {
 }
 
 .left {
+  border: 1px solid red;
   flex: 1;
   max-width: 471px;
+  min-width: 471px;
 }
 @media only screen and (max-width: 600px) {
   .left {

@@ -84,7 +84,7 @@ function CreatePost() {
 
           <div className="createpost--body">
             <div className="preview--container">
-              <img src={AddFile} id="preview" />
+              <img src={AddFile} id="preview" className="noImage" />
               <label className="remove--file" onClick={removeImage}>
                 X
               </label>
@@ -109,7 +109,9 @@ function CreatePost() {
             {uploading && <LoadingBar />}
           </div>
           <div className="createpost--footer">
-            <img src={currentUser.photoURL} alt="" />
+            <div className="footer--image">
+              <img src={currentUser.photoURL} alt="" />
+            </div>
             <input type="text" required placeholder="Add Caption ..." />
             <button className={uploading ? "disable" : ""}>Post</button>
           </div>

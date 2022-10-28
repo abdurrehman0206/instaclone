@@ -30,15 +30,24 @@ body {
 .userprofile--container {
   margin-top: 1.25rem;
   width: 50%;
+  border: 1px solid magenta;
 }
 @media only screen and (max-width: 600px) {
   .userprofile--container {
-    width: 90%;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 
 .userprofile {
+  border: 1px solid magenta;
   width: 55%;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,6 +59,13 @@ body {
     width: 100%;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 901px) {
+  .userprofile {
+    width: 100%;
+    flex-direction: column;
   }
 }
 
@@ -57,6 +73,12 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+}
+@media only screen and (max-width: 600px) {
+  .userprofile--pic img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .userprofile--details {
@@ -75,6 +97,18 @@ body {
   font-size: 1rem;
   font-weight: 600;
 }
+@media only screen and (max-width: 600px) {
+  .userprofile--details {
+    align-items: center;
+    gap: 1rem;
+  }
+}
+@media only screen and (max-width: 901px) {
+  .userprofile--details {
+    align-items: center;
+    gap: 1rem;
+  }
+}
 
 .userprofile--stats {
   display: flex;
@@ -89,8 +123,14 @@ body {
 .userposts--grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  overflow: scroll;
   grid-gap: 10px;
   margin-top: 5rem;
+}
+@media only screen and (max-width: 600px) {
+  .userposts--grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .userpost--thumbnail {

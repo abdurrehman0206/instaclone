@@ -18,12 +18,14 @@
   }
 }
 .left {
+  border: 1px solid red;
   // @include flex;
   // flex-direction: column;
   // align-items: flex-start;
   // justify-content: space-between;
   flex: 1;
   max-width: 471px;
+  min-width: 471px;
   @include respond(phone) {
     min-width: 380px;
     max-width: 100%;
